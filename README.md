@@ -37,7 +37,7 @@ __The simplest Git workflow__ - The single line shows a workflow that uses only 
 
 __Git commit process__ - Git organizes files in a project directory in 3 categories. While all files are stored in the project directory, changes in these files are not automatically included in the repository. You must first get ready to include them by adding them to the staging area. When you're ready to record the files in the repository, you need to commit the changes you've made. Only then will they be retrievable later on.
 
-- __Git Stages__
+## Git Stages
   - In order to keep track of the files associated with your project, you need to tell git to include them. Files that you associated with your repository are 'tracked'. In order to do this, use `git add`.
     - `git add outline.txt`
     - One advantage of this setup is that you can have files in your folder that are not tracked by git, if you're not ready to include them in your project.
@@ -48,7 +48,7 @@ __Git commit process__ - Git organizes files in a project directory in 3 categor
   - Now run `git log` again. What do you see?
 
 
-- __Rolling back changes__
+## Rolling back changes
   - Now let's make another commit, where we simulate adding something very important to our repository.
     - `echo "SUPER IMPORTANT TEXT" > important.txt`
     - `git status`
@@ -74,7 +74,7 @@ __Git commit process__ - Git organizes files in a project directory in 3 categor
     - `git revert <BAD_COMMIT_HASH>`
 
 
-- Branching
+## Branching
   - So far, we have only been discussing git commands in the context of a _single version_ of a repository. However, one of the most powerful features of git is its ability to handle branches, or different versions of a project.
   - By creating different branches, you can try changes to a project that don't affect the primary/main version. If the changes look good, you can then merge them back into the main version (Master branch).
   - `git branch featureOne` will create a new branch for your project.
@@ -96,7 +96,7 @@ __Git commit process__ - Git organizes files in a project directory in 3 categor
 
 __A more advanced Git workflow__ - In this schematic of a git workflow, the project has three branches. Two of the branches (yellow and teal) are being used to try out new features. Note the separate commits (circles) to these branches as progress is made. The yellow feature branch is then merged back into Master, once that feature is successfully implemented.
 
-- Collaborative coding
+## Collaborative coding
   - We are going to use git to work together to fix and expand a catalog of animals found in Louisiana.
   - I've started this catalog and posted it here: https://github.com/IntroToCompBioLSU-Spr20/LAFauna
   - However, I've made some mistakes and a lot more work needs to be done. To collaborate on this, let's all first make our own copy of the repository so that we can suggest edits and additions. To do this, click the `Fork` button in the upper right of the repository. Remember that forking will make a copy of the entire repository and associate it with your account.
@@ -107,27 +107,27 @@ __A more advanced Git workflow__ - In this schematic of a git workflow, the proj
 		- Click the blue `Use HTTPS` link in the upper right of the dropdown menu
 		- Copy the URL that GitHub provides, which starts https://github.com/...
 		- Now navigate to the place on your computer where you want to store your repository and run `git clone <GITHUB_URL>`
- - You should now have a complete version of the "LAFauna" repository on your home directory. Use `cd` to change directories into your repository folder.
- - Go ahead and divide up into groups of two or three. Each group will then be assigned one of the groups of animals. You will need to do a few things for your group:
+  - You should now have a complete version of the "LAFauna" repository on your home directory. Use `cd` to change directories into your repository folder.
+  - Go ahead and divide up into groups of two or three. Each group will then be assigned one of the groups of animals. You will need to do a few things for your group:
 	 - First, make a new branch with a name that indicates which group you're working on and checkout that branch.
 	 - Now, in the folder for your group, look at the list of scientific names of the 6 species. With some internet research, figure out which of these species has been incorrectly included because it does not actually occur in Louisiana and remove it from the list.
 	 - Also, create a corresponding file for the common names of the remaining species, with the same file naming scheme (e.g., LAFish_common.txt). Look up the common names for the remaining 5 species and add them to this file.
 	 - Make a commit to your branch after you add or delete each species name.
- - Because you cloned this repository directly from GitHub, git automatically remembers this original repostitory. Try running `git remote -v`. Note the name git uses for this remote repository - `origin`.
- - Now we're going to send our updates back to origin. In git, this is called `pushing`. A couple of things to note: you can push any branch individually, and the changes are sent to _your_ fork of the repo.
+  - Because you cloned this repository directly from GitHub, git automatically remembers this original repostitory. Try running `git remote -v`. Note the name git uses for this remote repository - `origin`.
+  - Now we're going to send our updates back to origin. In git, this is called `pushing`. A couple of things to note: you can push any branch individually, and the changes are sent to _your_ fork of the repo.
 	 - `git push origin <YOUR_BRANCH>`
 	 - GitHub may require that you manually enter your username and password before it accepts the push. If you get tired of doing this, you can set up automatic authentication using ssh.
- - Go back to your fork on GitHub and check that the updates have been pushed. Note that you can look at different branches by selecting them from the dropdown menu in the upper left.
- - If all looks good, create a pull request to send your changes back to the main repository on the class page (like you did for last week's assignment).
- - Let me know when you've done this, and I'll merge all the pull requests into the class repo.
- - Once everyone's updates have been merged, you might want to update your fork with all of the changes. The best way to do this is with a "pull". But first, you'll need to add the class repo as a remote:
+  - Go back to your fork on GitHub and check that the updates have been pushed. Note that you can look at different branches by selecting them from the dropdown menu in the upper left.
+  - If all looks good, create a pull request to send your changes back to the main repository on the class page (like you did for last week's assignment).
+  - Let me know when you've done this, and I'll merge all the pull requests into the class repo.
+  - Once everyone's updates have been merged, you might want to update your fork with all of the changes. The best way to do this is with a "pull". But first, you'll need to add the class repo as a remote:
 	 - `git remote add class https://github.com/IntroToCompBioLSU/LAFauna.git`
 	 - I've used the name __class__ to indicate this new remote, but you can name it whatever you want.
 	 - `git remote -v`
 	 - `git pull class master` (Pulling changes from the master branch of class)
- - Now you've synced your local version of the fork using the class repo, but your fork on GitHub still needs to be updated.
- - Paying attention to which branch you're on locally, run `git push origin <YOUR_BRANCH>`.
- - Now go back to your fork on GitHub and verify that the updates are there.
+  - Now you've synced your local version of the fork using the class repo, but your fork on GitHub still needs to be updated.
+  - Paying attention to which branch you're on locally, run `git push origin <YOUR_BRANCH>`.
+  - Now go back to your fork on GitHub and verify that the updates are there.
 
 Who learned something interesting about the group they were assigned?
 
