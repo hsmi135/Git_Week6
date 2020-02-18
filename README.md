@@ -121,7 +121,7 @@ __A more advanced Git workflow__ - In this schematic of a git workflow, the proj
   - If all looks good, create a pull request to send your changes back to the main repository on the class page (like you did for last week's assignment).
   - Let me know when you've done this, and I'll merge all the pull requests into the class repo.
   - Once everyone's updates have been merged, you might want to update your fork with all of the changes. The best way to do this is with a "pull". But first, you'll need to add the class repo as a remote:
-	 - `git remote add class https://github.com/IntroToCompBioLSU/LAFauna.git`
+	 - `git remote add class https://github.com/IntroToCompBioLSU-Spr20/LAFauna.git`
 	 - I've used the name __class__ to indicate this new remote, but you can name it whatever you want.
 	 - `git remote -v`
 	 - `git pull class master` (Pulling changes from the master branch of class)
