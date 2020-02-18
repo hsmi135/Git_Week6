@@ -2,7 +2,7 @@
 
 ## Getting started with git
 
-- __Global Configuration__
+### __Global Configuration__
   - When you perform operations with git, it will keep track of who you are. It does this so that things stay organized in large projects.
   - To provide git with your username, use `git config --global user.name "<YOUR_NAME>"`
     - In general, whenever I write <SOMETHING> I intend for you to substitute that text
