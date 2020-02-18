@@ -12,9 +12,9 @@
   - `cd myProject` - Change into project directory
   - `echo "<PROJECT_NAME>" >> outline.txt` - Add an outline file to your project containing the project's names
   - `ls -a` (or `ll` on Ubuntu) - Take a look at what's initially in the project directory
-  - `git init` - Initializes the repository       ## ensure your in the working dir you want the repo to be stored
+  - `git init` - Initializes the repository       `## ensure your in the working dir you want the repo to be stored`
   - Using `ls -a`, take another look at the project directory (now also a repository)
-    - What's different?		## it created a hidden .git folder... the updates will be automatcally be stored in this 					folder..... to stop a repo you can go and delete the .git to remove/delete the git repo
+    - What's different?		`## it created a hidden .git folder... the updates will be automatcally be stored in this 					folder..... to stop a repo you can go and delete the .git to remove/delete the git repo`
     - Explore a bit with `cd` and `cat`
     
 
