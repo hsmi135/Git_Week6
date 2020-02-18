@@ -1,15 +1,13 @@
-# Git
+# Getting started with git
 
-## Getting started with git
-
-### __Global Configuration__
+## Global Configuration
   - When you perform operations with git, it will keep track of who you are. It does this so that things stay organized in large projects.
   - To provide git with your username, use `git config --global user.name "<YOUR_NAME>"`
     - In general, whenever I write <SOMETHING> I intend for you to substitute that text
   - To provide git with your email address, use `git config --global user.email <YOUR_EMAIL_ADDRESS>`
 
 
-- __Creating a repository__
+## Creating a repository
   - `mkdir myProject` - Creates the directory for a project
   - `cd myProject` - Change into project directory
   - `echo "<PROJECT_NAME>" >> outline.txt` - Add an outline file to your project containing the project's names
@@ -24,7 +22,7 @@
 
 __The simplest Git workflow__ - The single line shows a workflow that uses only one branch, called Master. Circles represent commits made to Master as the project progresses.
 
-- __'Git'ting started__
+## 'Git'ting started
   - Git projects operate on a branching model. Branches keep track of different versions of a project, without having to store completely independent copies.
   - The most basic way to work with git is to use only a single branch, usually called "Master". As changes are made, they are all committed (sort of like git's version of saving) to the Master branch.
   - `git` is the actual program that handles everything behind the scenes for us
